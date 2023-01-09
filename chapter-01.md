@@ -21,7 +21,7 @@
 
 - Using JavaScript through ReactJs to change what's visible on the screen and that often leads to a smoother UI and a better user experience.
 
-## <img src="https://img.shields.io/badge/ReactJs-0088CC?style=for-the-badge&logo=React&logoColor=white"> Alternatives
+## ReactJs Alternatives - <img src="https://img.shields.io/badge/ReactJs-0088CC?style=for-the-badge&logo=React&logoColor=white">
 
 ![](imgs/react2.gif)
 
