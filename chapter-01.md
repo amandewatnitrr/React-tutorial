@@ -6,10 +6,10 @@
 ![](imgs/react1.png)
 <hr>
 
-- JavaScript is a programming language that allows us as a developer to run logic in the browser. And the great thing about that logic in the browser is that it can do things that manipulate what the user sees. 
-- JavaScript in the browser is able to manipulate to so-called Dom, the HTML elements that are rendered onto the screen. 
-- We can manipulate this with JavaScript. And that allows us to change what the users sees without fetching a new HTML page. We don't need to request a new HTML page just to present something different to the user. So that's why JavaScript can help us. 
-- And since React is a JavaScript library, it looks like it can also help us with that. It might be an extra building block, and indeed, React.js is a client-side JavaScript library. 
+- JavaScript is a programming language that allows us as a developer to run logic in the browser. And the great thing about that logic in the browser is that it can do things that manipulate what the user sees.
+- JavaScript in the browser is able to manipulate to so-called Dom, the HTML elements that are rendered onto the screen.
+- We can manipulate this with JavaScript. And that allows us to change what the users sees without fetching a new HTML page. We don't need to request a new HTML page just to present something different to the user. So that's why JavaScript can help us.
+- And since React is a JavaScript library, it looks like it can also help us with that. It might be an extra building block, and indeed, React.js is a client-side JavaScript library.
 - It helps us with writing that client-side JavaScript code and it's all about building modern reactive user interfaces for websites.
 
 ## Building SPAs with ReactJs
@@ -21,7 +21,7 @@
 
 - Using JavaScript through ReactJs to change what's visible on the screen and that often leads to a smoother UI and a better user experience.
 
-## ReactJs Alternatives 
+## ReactJs Alternatives
 
 ![](imgs/react2.gif)
 
@@ -49,6 +49,75 @@
   - It's also a complete component-based UI framework.
   - Also, it also includes a lot of features, but bit less features than Angular but more than ReactJs.
   - It includes core features like Routing, for example and therefore with Vue we also have to rely less on the community.
+
+## Javascript Refresher
+
+- This section is mainly for beginners in JavaScript and is not recommended for people who already have decent experience working with JavaScript.
+
+- For detailed study we recommend you taking JavaScript Lessons from here -> <a href="https://github.com/amandewatnitrr/javascript-practice"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=plastic&logo=javascript&logoColor=black"></a>
+
+- But some of the topics still need updated which we will discuss here in this particular guide.
+
+### Export and Import in Next Gen Js
+
+![](imgs/export-import.jpg)
+![](imgs/export-import2.jpg)
+
+### Spread & Rest Operators
+
+- First let's clear it out that it's just a single operator and not 2 different operators and is denoted by `...`.
+- Spread: Used to split up array elements or object properties
+
+  - For example:
+
+        ```JS
+        // If we want to add elements to from an old exsisting array to new array, we can do it as:
+
+        var newArray =  [...oldArray,1,2];
+        var newObject = [...oldObject,newProp:5];
+        ```
+
+- Rest: Used to merge a list of function arguments into an array
+  
+  - For example:
+
+        ```Js
+        // This allows us to pass multiple arguments as input to the function.
+
+        function sort(...args) {
+          return args.sort();
+        }
+
+        ```
+
+### Destructuring
+
+- Destructuring easily extract array elements or object properties and store them in variables.
+- Destructuring allows you to extract single element or properties and store them in variables.
+
+## Components in ReactJs
+
+- ReactJs is a Javascript library used for building User Interfaces.
+- It makes building complex, interactive and reactive user interfaces simpler.
+- ReactJs is all about components.
+
+### Why Components in ReactJs
+
+- ReacJs praises the concept of Components because of it's Reusability aspect
+- It allows us to seprate our concerns
+- Both are important concepts in programming in general.
+- Having reusable building blocks helps us avoid repeatation
+- It allows us to keep our codebase small and managable
+- It allows us to split big chunks of code into multiple smaller functions
+
+### How is a Component Built?
+
+- In actual, the frontend development is all about HTML, CSS and JavaScript.
+- In ReactJs, we combine all these together to build the User Interface.
+- React allows us to create re-usable and reactive components consisting of HTML and JavaScript (and CSS).
+- ReactJs uses "Declarative Approach" to build these components.
+- It basically means that with ReactJs that we don't tell that certain HTML need to be placed in certain manner on the User Interface as we do it with Vanilla JavaScript or just JavaScript.
+- With ReactJs we will always define the desried end state or target state and let React figure out the actual JavaScript DOM instructions.
 
 </strong>
 </p>
