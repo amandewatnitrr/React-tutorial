@@ -16,3 +16,8 @@
 - This will automatically open the webpage on `localhost:3000` and you should see something similar as shown below:
   
 ![](imgs/Screenshot%202023-02-02%20at%2011.34.11%20PM.png)
+
+## Introducing JSX
+
+- JSX Code is nothing but HTML code inside of JavaScript.
+- JSX stands for JavaScript XML because HTMl in the end is XML.
