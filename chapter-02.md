@@ -9,7 +9,7 @@
 - Also, make sure you don't have a prxy, firewall applied that might be blocking out your connection.
 - Now as soon as the installation gets completed, run the following commands:
 -
-    
+
     cd react-application-name
     npm start
 
