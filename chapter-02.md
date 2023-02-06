@@ -4,17 +4,17 @@
 - Open the folder in the terminal where you want to create project and run the following commands:
 -
 
-    ```
-        npx create-react-app react-application-name
+    ```bash
+    npx create-react-app react-application-name
     ```
 
 - Also, make sure you don't have a prxy, firewall applied that might be blocking out your connection.
 - Now as soon as the installation gets completed, run the following commands:
 -
 
-    ```
-        cd react-application-name
-        npm start
+    ```bash
+    cd react-application-name
+    npm start
     ```
 
 - This will automatically open the webpage on `localhost:3000` and you should see something similar as shown below:
