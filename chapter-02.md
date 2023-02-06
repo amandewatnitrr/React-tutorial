@@ -4,7 +4,7 @@
 - Open the folder in the terminal where you want to create project and run the following commands:
 -
 
-    ```BASH
+    ```
         npx create-react-app react-application-name
     ```
 
@@ -12,7 +12,7 @@
 - Now as soon as the installation gets completed, run the following commands:
 -
 
-    ```BASH
+    ```
         cd react-application-name
         npm start
     ```
