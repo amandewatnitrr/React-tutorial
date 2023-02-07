@@ -38,3 +38,6 @@
 
 - This works but it might get cubersome when dealing with huge codebase or complex user interfaces with dozens or hundreds of elements, which also might be changing and appearing and disappearing all the time, having to write all these instruction is a reall mess.
 - With ReactJs instead, we just define the desired end state directly that we want whatever tag a paragraph, a heading or anything etc.., and then ReactJsgenerates these instructions behind the screen to bring that onto the screen.
+- With ReactJs, we build a component tree.
+
+So, let's do some practical and try implementing and working up with ReactJs.
