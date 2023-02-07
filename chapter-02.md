@@ -21,3 +21,20 @@
 
 - JSX Code is nothing but HTML code inside of JavaScript.
 - JSX stands for JavaScript XML because HTMl in the end is XML.
+- This only works because there are transformation steps in JavaScript running behind the scens because of this process. The `npm start` process which we started which transformed this JavaScript code to more browser friendly code before everything is being served here.
+
+## How ReactJs works??
+
+- The Normal JavaScript follows an imperative approach.
+- Like for example:
+
+    ```javascript
+    const para = document.createElement('p');
+    para.textContent = 'This is the content of the Paragraph';
+    document.getElementById('root').append(para);
+    ```
+
+    This is how we will deal when adding an element with JavaScript only. While doing the same in ReactJs is pretty easy.
+
+- This works but it might get cubersome when dealing with huge codebase or complex user interfaces with dozens or hundreds of elements, which also might be changing and appearing and disappearing all the time, having to write all these instruction is a reall mess.
+- With ReactJs instead, we just define the desired end state directly that we want whatever tag a paragraph, a heading or anything etc.., and then ReactJsgenerates these instructions behind the screen to bring that onto the screen.
