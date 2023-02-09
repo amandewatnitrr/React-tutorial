@@ -16,6 +16,7 @@ import img2 from '../../imgs/filters_quality(75).gif';
 import img3 from '../../imgs/image_processing20210310-21872-1ytlz0c.gif';
 import Footer from '../footer/footer';
 import img4 from '../../imgs/money_tracker_app_4x.webp';
+import bootstrap from 'bootstrap';
 
 function App() {
   return (
@@ -101,7 +102,6 @@ function App() {
             </Card>
         </div>
       </div>
-
       </div>
 
       <Footer/>

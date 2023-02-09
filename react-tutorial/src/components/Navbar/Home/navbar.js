@@ -23,11 +23,10 @@ function ExpenseItem(){
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link href="/Home"><FaHome/> Home</Nav.Link>
-                    <Nav.Link href="/About"><FaJenkins/> About</Nav.Link>
+                    <Nav.Link href="/AboutUs"><FaJenkins/> About Us</Nav.Link>
                 </Nav>
                 <Nav>
-                    <Nav.Link href="/SignIn"><Button id="signinbutton" variant="success"><FaSignInAlt/> Sign In</Button></Nav.Link>
-                    <Nav.Link href="/SignIn"><Button id="signinbutton" variant="success"><FaDoorOpen/> Sign Up</Button></Nav.Link>
+                    <Nav.Link href="/SignIn"><Button id="signinbutton" variant="success"><FaSignInAlt/> Sign In/ Sign Up</Button></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
