@@ -44,4 +44,6 @@ So, let's do some practical and try implementing and working up with ReactJs.
 
 - After spending quite some time we came up with this basic frontend with ReactJs.
 
-![](imgs/Screen%20Recording%202023-02-10%20at%202.29.16%20AM%20(1).gif)
+![](imgs/react-practice-app-v1.gif)
+
+
