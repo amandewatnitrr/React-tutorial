@@ -10,6 +10,7 @@ import {
 import Navbar from './components/Navbar/Home/navbar';
 import BgAnimation from './components/Background/BgAnimation';
 import Home from './components/Home/Home';
+import SignIn from './components/SignIn/SignIn';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
             
             <Route exact path='/Home' element={<Home />} />
+            <Route exact path='/SignIn' element={<SignIn />} />
 
         </Routes>
       </Router>

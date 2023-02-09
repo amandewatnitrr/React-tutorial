@@ -10,3 +10,113 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 25px;
 }
+
+.d-block{
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 40%;
+    background-color:rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+        .d-block{
+            margin: 0 auto;
+            margin-top: 1rem;
+            width: 95%;
+            background-color:rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur( 7.5px );
+            -webkit-backdrop-filter: blur( 7.5px );
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        #card1{
+            margin: 0 auto;
+            display: grid;
+            width: 100%;
+            margin-top: 3rem;
+            background-color:rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur( 7.5px );
+            -webkit-backdrop-filter: blur( 7.5px );
+            box-shadow: 10px 10px 10px rgba(30,30,30,0.5);
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            border-radius: 25px;
+        }
+    }
+
+@media screen and (min-width: 768px) {
+
+    #column{
+        width: 42.5%;
+        padding: 0.01rem;
+        float: left;
+    }
+
+    #row::after{
+        content: "";
+        clear: both;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #img4{
+
+        width: 75%;
+        margin-left: 9.3rem;
+        margin-top: 3rem;
+        background-color:rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur( 7.5px );
+        -webkit-backdrop-filter: blur( 7.5px );
+        box-shadow: 10px 10px 10px rgba(30,30,30,0.5);
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        border-radius: 25px;
+    }
+
+    #servicedetails{
+        margin-top: 3rem;
+        margin-left: 5rem;
+        width: 100%;
+        border-radius: 25px;
+        background-color:rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur( 7.5px );
+        -webkit-backdrop-filter: blur( 7.5px );
+        box-shadow: 10px 10px 10px rgba(30,30,30,0.5);
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    #servicedetails{
+        width: 80%;
+        margin: auto;
+        text-align: justify;
+        display: block;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 25px;
+        background-color:rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur( 7.5px );
+        -webkit-backdrop-filter: blur( 7.5px );
+        box-shadow: 10px 10px 10px rgba(30,30,30,0.5);
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+
+    #img4{
+        width: 90%;
+        margin: auto;
+        margin-top: 2rem;
+        text-align: center;
+        display: block;
+        background-color:rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur( 7.5px );
+        -webkit-backdrop-filter: blur( 7.5px );
+        box-shadow: 10px 10px 10px rgba(30,30,30,0.5);
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        border-radius: 25px;
+    }
+}
