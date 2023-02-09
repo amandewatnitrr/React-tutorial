@@ -44,6 +44,6 @@ So, let's do some practical and try implementing and working up with ReactJs.
 
 - After spending quite some time we came up with this basic frontend with ReactJs.
 
-![](imgs/react-practice-app-v1.gif)
+<img width=60% src="./imgs/react-practice-app-v1.gif"/>
 
 
