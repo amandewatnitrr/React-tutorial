@@ -1,35 +1,25 @@
-#signinform{
-    width: 30%;
+#expensecalc{
+    width: 50%;
     margin: 0 auto;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    padding: 3rem;
     background-color:rgba(255, 255, 255, 0.8);
     backdrop-filter: blur( 7.5px );
     -webkit-backdrop-filter: blur( 7.5px );
-    box-shadow: 10px 10px 10px rgba(30,30,30,0.5);
-}
-
-#signninbtn{
-    margin-left: -1rem;
-}
-
-#formsign{
-    margin: 1rem;
-}
-
-.mb-2{
-    margin-top: 1rem!important;
-    
 }
 
 @media screen and (max-width: 767px) {
-    #signinform{
-        width: 90%;
+    #expensecalc{
+        width: 97%;
         margin: 0 auto;
-        margin-top: 3rem;
+        margin-top: 2rem;
+        padding: 1rem;
         background-color:rgba(255, 255, 255, 0.8);
         backdrop-filter: blur( 7.5px );
         -webkit-backdrop-filter: blur( 7.5px );
-        box-shadow: 10px 10px 10px rgba(30,30,30,0.5);
     }
-    
+
+    #ToastRecord{
+        width: 200%;
+    }
 }

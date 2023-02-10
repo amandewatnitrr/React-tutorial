@@ -1,0 +1,43 @@
+.navbar-brand {
+    margin-left: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    #signinbutton{
+        margin-right: 1rem;
+    }
+
+    #signoutbutton{
+        margin-right: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    #signinbutton{
+        padding: 1%;
+        margin-right: auto;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        width: 40%;
+    }
+
+    #signoutbutton{
+        margin-top: 1rem;
+    }
+
+    .me-auto{
+        margin-top: 1rem;
+    }
+}
+
+.nav-link{
+    color: grey;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.d-flex{
+    margin-right: 2rem;
+}
+

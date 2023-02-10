@@ -5,7 +5,8 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    useNavigate
+    useNavigate,
+    Link
   } from "react-router-dom";
 import Navbar from '../Navbar/Home/navbar';
 import BgAnimation from '../Background/BgAnimation';
@@ -102,10 +103,8 @@ function Signin() {
                 </Form.Control.Feedback>
                 <Form.Control.Feedback>Looks Good!</Form.Control.Feedback>
             </Form.Group>
-        
-            <Button variant="primary" type="submit">
-                Submit
-            </Button>
+
+            <Link className="nav-link" to="/Profile"><Button id="signninbtn" variant="primary" type="submit">Sign In</Button></Link>
 
             <br/><br/>
             <Form.Text>
