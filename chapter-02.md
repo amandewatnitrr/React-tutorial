@@ -46,4 +46,14 @@ So, let's do some practical and try implementing and working up with ReactJs.
 
 <img width=60% src="./imgs/react-practice-app-v1.gif"/>
 
+## Passing Data via `Props`
 
+- Let's say in your app component we have a variable called `goalitem = 'finish` which holds a string value. And than we have a custom component called `<CourseGoalItem />` component which has a list item inside of it ```<li>{goalitem}</li>``` where this `goalitem` should be displayed.
+- The Problem is the variable `goalitem` lives in the app component and not in `<CourseGoalItem />` component. And to certain extent that's good because it makes the `<CourseGoalItem />` component independent if it doesn't store the concrete value internally.
+- But we want to know what's being output by `<CourseGoalItem />` with help of the variable managed in App. And we don't have direct access to the HTML Code Output by some component in other components.
+- Components can't just use data stored in other components.
+- But than we can utilizze the concept of `props`
+
+- We can pass data to the custom component by adding a attribute. And inside of that component, we can get access to all the attributes which might have been set on our custom component.
+
+![](imgs/VideoScreenshot--React-TheCompleteGuideinclHooksReactRouterRedux-3’38”.jpg)
