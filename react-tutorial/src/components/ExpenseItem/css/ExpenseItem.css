@@ -4,9 +4,9 @@
     align-items: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.304);
     padding: 0.5rem;
-    margin: 2rem;
     border-radius: 12px;
     background-color: #ffffff;
+    width: 97.5%;
   }
   
   .expense-item__description {
@@ -46,6 +46,18 @@
       flex: 1;
       margin-left: 2rem;
     }
+
+    .expense-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.304);
+      padding: 0.5rem;
+      margin: 2rem;
+      border-radius: 12px;
+      background-color: #ffffff;
+      width: 60%;
+    }
   
     .expense-item__description h2 {
       font-size: 1.25rem;
@@ -55,4 +67,33 @@
       font-size: 1.25rem;
       padding: 0.5rem 1.5rem;
     }
+  }
+
+  .expense-date {
+    display: flex;
+    flex-direction: column;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid #ececec;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-left: 0.25rem;
+  }
+  
+  .expense-date__month {
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+  
+  .expense-date__year {
+    font-size: 0.75rem;
+  }
+  
+  .expense-date__day {
+    font-size: 1.5rem;
+    font-weight: bold;
   }

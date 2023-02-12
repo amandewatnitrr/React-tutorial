@@ -10,16 +10,15 @@ function Profile() {
   const expenses = [
     {
       id: 'e1',
-      title: 'Toilet Paper',
-      amount: 94.12,
-      date: new Date(2020, 7, 14),
+      title: 'Macbook Pro 14',
+      amount: 2484.23,
+      date: new Date(2023, 0, 26),
     },
-    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
     {
-      id: 'e3',
-      title: 'Car Insurance',
-      amount: 294.67,
-      date: new Date(2021, 2, 28),
+      id: 'e2',
+      title: 'Clothes',
+      amount: 113.30,
+      date: new Date(2023, 0, 24),
     },
     {
       id: 'e4',
@@ -38,7 +37,13 @@ function Profile() {
         title={expenses[0].title}
         amount={expenses[0].amount}
         date={expenses[0].date}
-      ></ExpenseItem>
+      />
+
+    <ExpenseItem
+        title={expenses[1].title}
+        amount={expenses[1].amount}
+        date={expenses[1].date}
+      />
 
     </div>
     <Footer />
