@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import {FaEdit} from 'react-icons/fa';
 import './css/EditExpenseItem.css';
 
-function EditButton(props){
+function EditButton({title, date, amount}){
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -14,15 +14,15 @@ function EditButton(props){
   const Submit = (event) => {
     
     setShow(false);
-    props.name = enteredTitle;
-    props.date = enteredDate;
-    props.amt = enteredAmt;
-    console.log(props.name + " " + props.date + " " + props.amt);
+    title = enteredTitle;
+    date = enteredDate;
+    amount = enteredAmt;
+    console.log(title + " " + date + " " + amount);
   }
 
-  const [enteredTitle, setEnteredTitle] = useState('');
-  const [enteredAmt, setEnteredAmt] = useState('');
-  const [enteredDate, setEnteredDate] = useState('');
+  const [enteredTitle, setEnteredTitle] = useState(title);
+  const [enteredAmt, setEnteredAmt] = useState(amount);
+  const [enteredDate, setEnteredDate] = useState(date);
 
   const titleHandler = (event) =>{
     console.log(event.target.value);
@@ -54,17 +54,17 @@ function EditButton(props){
 
             <Form.Group className="mb-3" controlId="formBasicDate">
                 <Form.Label>Date</Form.Label>
-                <Form.Control type="date" onChange={dateHandler} placeholder={props.date} />
+                <Form.Control type="date" onChange={dateHandler} placeholder= {date} />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicHeading">
                 <Form.Label>New Title</Form.Label>
-                <Form.Control type="title" onChange={titleHandler} placeholder={props.name} />
+                <Form.Control type="title" onChange={titleHandler} placeholder={title} />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Amount</Form.Label>
-                <Form.Control type="number" onChange={amtHandler} placeholder={props.amt} />
+                <Form.Control type="number" onChange={amtHandler} placeholder={amount} />
             </Form.Group>
 
             </Form>

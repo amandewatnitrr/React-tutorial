@@ -9,27 +9,28 @@ import AddExpesneItem from '../../AddExpenseItem/AddExpenseItem';
 
 function Profile() {
 
-  const expenses = [
+  var expenses = [
     {
       id: 'e1',
-      title: 'Macbook Pro 14',
+      title: "Macbook Pro 14",
       amount: 2484.23,
       date: new Date(2023, 0, 26),
     },
     {
       id: 'e2',
-      title: 'Clothes',
+      title: "Clothes",
       amount: 113.30,
       date: new Date(2023, 0, 24),
     },
     {
       id: 'e4',
-      title: 'New Desk (Wooden)',
+      title: "New Desk (Wooden)",
       amount: 450,
       date: new Date(2021, 5, 12),
     },
   ];
 
+  
   return (
     <>
     <Navabar/>

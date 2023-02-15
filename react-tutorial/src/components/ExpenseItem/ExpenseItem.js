@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from'react-dom';
 import {
     BrowserRouter as Router,
@@ -11,11 +11,12 @@ import BgAnimation from '../Background/BgAnimation';
 import EditButton from './EditExpenseItem/EditExpenseItem';
 
 
-function ExpenseItem(props){
+function ExpenseItem({title, amount, date}){
 
-    const month = props.date.toLocaleString('en-US', { month: 'long' });
-    const day = props.date.toLocaleString('en-US', { day: '2-digit' });
-    const year = props.date.getFullYear();
+
+    const month = date.toLocaleString('en-US', { month: 'long' });
+    const day = date.toLocaleString('en-US', { day: '2-digit' });
+    const year = date.getFullYear();
 
     return(
         <>
@@ -29,12 +30,12 @@ function ExpenseItem(props){
             </div>
 
             <div className='expense-item__description'>
-                <h2 className="expensetitle">{props.title}</h2>
-                <Button className="expense-item__price" variant="danger">${props.amount}</Button>
+                <h2 className="expensetitle">{title}</h2>
+                <Button className="expense-item__price" variant="danger">$ {amount} </Button>
             </div>
                 
             <div>
-                <EditButton name={props.title} date={new Date(year, month, day)} amt={props.amount}/>
+                <EditButton title={title} date={date} amount={amount}/>
             </div>
         </div>
         </>
