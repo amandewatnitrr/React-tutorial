@@ -57,3 +57,4 @@ So, let's do some practical and try implementing and working up with ReactJs.
 - We can pass data to the custom component by adding a attribute. And inside of that component, we can get access to all the attributes which might have been set on our custom component.
 
 ![](imgs/VideoScreenshot--React-TheCompleteGuideinclHooksReactRouterRedux-3’38”.jpg)
+

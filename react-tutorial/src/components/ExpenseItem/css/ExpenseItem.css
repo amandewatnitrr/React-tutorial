@@ -6,9 +6,8 @@
     padding: 0.5rem;
     border-radius: 12px;
     background-color: #ffffff;
-    width: 97.5%;
   }
-  
+
   .expense-item__description {
     display: flex;
     flex-direction: column;
@@ -29,7 +28,7 @@
   
 
   .expense-item__price {
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: bold;
     padding: 0.5rem;
     border-radius: 12px;
@@ -56,7 +55,6 @@
       margin: 2rem;
       border-radius: 12px;
       background-color: #ffffff;
-      width: 60%;
     }
   
     .expense-item__description h2 {
@@ -96,4 +94,40 @@
   .expense-date__day {
     font-size: 1.5rem;
     font-weight: bold;
+  }
+
+  @media (max-width: 400px){
+    h2.expensetitle{
+      font-size: 0.7rem;
+      margin-left: 0.2rem;
+    }
+
+    .expense-date {
+      display: flex;
+      flex-direction: column;
+      width: 4rem;
+      height: 3.7rem;
+      border: 1px solid #ececec;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      border-radius: 12px;
+      align-items: center;
+      justify-content: center;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      margin-left: 0.25rem;
+    }
+
+    .expense-date__month {
+      font-size: 0.5rem;
+      font-weight: bold;
+    }
+    
+    .expense-date__year {
+      font-size: 0.7rem;
+    }
+    
+    .expense-date__day {
+      font-size: 1rem;
+      font-weight: bold;
+    }
   }

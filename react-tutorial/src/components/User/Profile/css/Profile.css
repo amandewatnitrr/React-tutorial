@@ -1,0 +1,12 @@
+.itemscard{
+    width:60%;
+    margin: 0 auto;
+    background-color: rgba(53, 59, 63, 0.4);
+}
+
+@media (max-width: 767px) {
+    .itemscard{
+        width:97.5%;
+        margin: 0 auto;
+    }
+} 

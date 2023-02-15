@@ -8,6 +8,7 @@ import {
 import './css/ExpenseItem.css';
 import Button from 'react-bootstrap/Button';
 import BgAnimation from '../Background/BgAnimation';
+import EditButton from './EditExpenseItem/EditExpenseItem';
 
 
 function ExpenseItem(props){
@@ -19,6 +20,7 @@ function ExpenseItem(props){
     return(
         <>
         <br/>
+        
         <div style={{"margin":"0 auto"}} className='expense-item'>
             <div className='expense-date'>
                 <div className='expense-date__month'>{month}</div>
@@ -30,8 +32,11 @@ function ExpenseItem(props){
                 <h2 className="expensetitle">{props.title}</h2>
                 <Button className="expense-item__price" variant="danger">${props.amount}</Button>
             </div>
+                
+            <div>
+                <EditButton name={props.title} date={new Date(year, month, day)} amt={props.amount}/>
+            </div>
         </div>
-        <BgAnimation/>
         </>
         
     );

@@ -4,6 +4,8 @@ import Navabar from '../../Navbar/User/navbar';
 import BgAnimation from '../../Background/BgAnimation';
 import Card from 'react-bootstrap/Card';
 import ExpenseItem from '../../ExpenseItem/ExpenseItem';
+import './css/Profile.css';
+import AddExpesneItem from '../../AddExpenseItem/AddExpenseItem';
 
 function Profile() {
 
@@ -32,20 +34,29 @@ function Profile() {
     <>
     <Navabar/>
     <div id="home" style={{"min-height":"50vh"}}>
+    
+    <br/>
 
-    <ExpenseItem
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-        date={expenses[0].date}
-      />
+    <Card className='itemscard'>
+      <Card.Body>
+        <AddExpesneItem/>
+        <ExpenseItem
+            title={expenses[0].title}
+            amount={expenses[0].amount}
+            date={expenses[0].date}
+          />
 
-    <ExpenseItem
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-        date={expenses[1].date}
-      />
+        <ExpenseItem
+            title={expenses[1].title}
+            amount={expenses[1].amount}
+            date={expenses[1].date}
+          />
+        <br/>
+      </Card.Body>
+    </Card>
 
     </div>
+    <BgAnimation/>
     <Footer />
     </>
   );
