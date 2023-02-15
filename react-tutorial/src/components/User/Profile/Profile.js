@@ -30,6 +30,7 @@ function Profile() {
     },
   ];
 
+  var expenselist = expenses.map((expense) => <ExpenseItem title={expense.title} amount={expense.amount} date={expense.date}/>);
   
   return (
     <>
@@ -41,17 +42,7 @@ function Profile() {
     <Card className='itemscard'>
       <Card.Body>
         <AddExpesneItem/>
-        <ExpenseItem
-            title={expenses[0].title}
-            amount={expenses[0].amount}
-            date={expenses[0].date}
-          />
-
-        <ExpenseItem
-            title={expenses[1].title}
-            amount={expenses[1].amount}
-            date={expenses[1].date}
-          />
+        {expenselist}
         <br/>
       </Card.Body>
     </Card>
