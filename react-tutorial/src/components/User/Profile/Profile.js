@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from '../../footer/footer';
 import Navabar from '../../Navbar/User/navbar';
 import BgAnimation from '../../Background/BgAnimation';
@@ -9,7 +9,7 @@ import AddExpesneItem from '../../AddExpenseItem/AddExpenseItem';
 
 function Profile() {
 
-  var expenses = [
+  var expensesData = [
     {
       id: 'e1',
       title: "Macbook Pro 14",
@@ -30,8 +30,13 @@ function Profile() {
     },
   ];
 
-  var expenselist = expenses.map((expense) => <ExpenseItem title={expense.title} amount={expense.amount} date={expense.date}/>);
-  
+  //prem
+  const [expenses,SetExpense] = useState(expensesData)
+
+  const handleAddExpense  = (data)=>SetExpense(d=>([...d,data]));
+
+  var expenselist = expenses.map((expense) => <ExpenseItem title={expense.title} amount={expense.amount} id  = {expense.id} SetExpense = {SetExpense} date={expense.date}/>);
+  // prem
   return (
     <>
     <Navabar/>
@@ -41,7 +46,8 @@ function Profile() {
 
     <Card className='itemscard'>
       <Card.Body>
-        <AddExpesneItem/>
+        {/* added hadleAddExpence */}
+        <AddExpesneItem handleAddExpense={handleAddExpense}/>
         {expenselist}
         <br/>
       </Card.Body>

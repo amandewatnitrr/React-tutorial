@@ -32,5 +32,9 @@
 
 ## Working with State
 
+- Let's try to understand this by viewing the example below:
+
+![](imgs/Screen%20Recording%202023-02-17%20at%205.27.31%20AM.gif)
+
 </strong>
 </p>

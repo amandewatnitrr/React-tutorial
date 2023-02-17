@@ -9,9 +9,10 @@ import './css/ExpenseItem.css';
 import Button from 'react-bootstrap/Button';
 import BgAnimation from '../Background/BgAnimation';
 import EditButton from './EditExpenseItem/EditExpenseItem';
+import DeleteButton from './DeleteExpenseItem/DeleteExpenseItem';
 
-
-function ExpenseItem({title, amount, date}){
+//id SetExpense props
+function ExpenseItem({title, amount, date,id,SetExpense}){
 
 
     const month = date.toLocaleString('en-US', { month: 'long' });
@@ -35,7 +36,11 @@ function ExpenseItem({title, amount, date}){
             </div>
                 
             <div>
-                <EditButton title={title} date={date} amount={amount}/>
+                {/* id and setExpense */}
+                <EditButton id={id} SetExpense = {SetExpense} title={title} date={date} amount={amount}/>
+            </div>
+            <div>
+                <DeleteButton id={id} SetExpense = {SetExpense} title={title} date={date} amount={amount}/>
             </div>
         </div>
         </>
