@@ -55,6 +55,7 @@ function Profile() {
 
     </div>
     <BgAnimation/>
+    <br/>
     <Footer />
     </>
   );

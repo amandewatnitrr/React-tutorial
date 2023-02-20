@@ -23,6 +23,7 @@ function ExpenseCalculator() {
       </Card>
     </GlobalProvider>
     <BgAnimation/>
+    <br/>
     <Footer />
     </>
   );

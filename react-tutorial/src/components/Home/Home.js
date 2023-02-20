@@ -103,6 +103,7 @@ function App() {
         </div>
       </div>
       </div>
+      <br/>
 
       <Footer/>
       <BgAnimation/>

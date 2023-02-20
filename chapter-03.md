@@ -90,8 +90,11 @@
 
 - But always remember if we want to change something associated with the parent element based on a interaction with the child element the properties or the attributes of the parent element that needs to be changed needs to passed to the child element as well.
 
+- The Whole Component function is updated when the State is updated and the `useState` line is also reexecuted again.
 
+- ReactJs keeps track of when we call `useState` in a given component instance for the first time and when we call this for the first time ever, it takes the argument as the initial value, but than the component is re-executed because of the state change and ReactJs will not reinitialise the state, instead it will detect the state had been initialsied in the past, and it will just grab the latest state which is based on some state update and give us that state instead.
 
+- So, the inital value of the argument `useState` is really considered when the function component function is being executed for the first time, for a given compoent instance.
 
 </strong>
 </p>

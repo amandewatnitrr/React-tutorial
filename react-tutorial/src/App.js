@@ -13,6 +13,7 @@ import Home from './components/Home/Home';
 import SignIn from './components/SignIn/SignIn';
 import ExpenseCalc from './components/User/ExpenseCalc/ExpenseCalc';
 import Profile from './components/User/Profile/Profile';
+import NotFound from './components/404/404';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route exact path='/SignIn' element={<SignIn />} />
             <Route exact path='/ExpenseCalc' element={<ExpenseCalc />} />
             <Route exact path='/Profile' element={<Profile />} />
+            <Route path="/*" element={<NotFound />} />
 
         </Routes>
       </Router>
