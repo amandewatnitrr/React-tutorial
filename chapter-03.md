@@ -114,9 +114,13 @@
 
     ```javascript
     const titleChangeHandler = (event) => {
-        setUserInput((prevState) =. {});
+        setUserInput((prevState) =. {
+            return;
+        });
     }
     ```
+
+    So, in this case for the object state here above we will get the previous state snapshot and now here, we should return the new state snapshot. So, instead of function we passed  to the state updating function, we return the new State now.
 
 </strong>
 </p>
