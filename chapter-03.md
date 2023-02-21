@@ -96,5 +96,27 @@
 
 - So, the inital value of the argument `useState` is really considered when the function component function is being executed for the first time, for a given compoent instance.
 
+- Also, let's understand a big difference here, that you might have observed that when adding a new `<ExpenseItem/>`, the `useState('')` is generally this, but when editing the exsisting `<Expenseitem/>` the useState is as `useState(var_name)`.
+
+- A key fact to note is whenever you update state and it depends on the previous state , instead of calling it like 
+
+    ```javascript
+    const titleChangeHandler = (event) => {
+        setEneteredTitle(event.target.value);
+        setUserInput({
+            ...userInput,
+            enteredTitle: event.target.value,
+        })
+    }
+    ```
+
+    you should call it and pass in a function to that function. So, you call the setUserInput function and you pass a function to it, And this function which you oass to setUserInput here will automatically be executed by ReactJs. And it will recieve the previous state snapshot for that state for which you're calling the updating function.
+
+    ```javascript
+    const titleChangeHandler = (event) => {
+        setUserInput((prevState) =. {});
+    }
+    ```
+
 </strong>
 </p>
