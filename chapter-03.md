@@ -115,12 +115,112 @@
     ```javascript
     const titleChangeHandler = (event) => {
         setUserInput((prevState) =. {
-            return;
+            return {...prevState, enteredTitle: event.target,value};
         });
     }
     ```
 
     So, in this case for the object state here above we will get the previous state snapshot and now here, we should return the new state snapshot. So, instead of function we passed  to the state updating function, we return the new State now.
+
+    And that now in our case should be our object, where I copy the key value pairs from the previous state with the spread operator but we then also override in this case here, enteredTitle with `event.target.value`.
+
+- But why do this with the arrow function way. In many cases both will work fine but keep in mind that react schedules state updates, it doesn't perform them instantly. And therefore, theoretically if you schedule a lot of state updates at the same time, and we could be depending on a outdated or incorrect state snapshot if we use the topmost approach.
+
+- If we use the last approach here React will guarantee that the state snapshot that it gives us here in this inner function will always be the latest state snapshot, keeping all scheduled states update in mind. So, this is a safer way to always operate on the latest state snapshot. So, we should use this function syntax here whenever your state update depends on the previous state.
+
+- Below is a simple example of we use state form with Inputs, when the length of input equals and exceeds 3, it shows the message "Valid Message" else "Invalid Message". You can copy and paste the code and test it out.
+
+    ```Javascript
+        import React from 'react';
+
+        import './styles.css';
+
+        // don't change the Component name "App"
+        export default function App() {
+            const [paraText,updatePara] = React.useState('Invalid message');
+            
+            function messagehandler(event){
+                const value = event.target.value;
+                if(value.trim().length<3){
+                    updatePara('Invalid message');
+                }
+                else{
+                    updatePara('Valid message');
+                }
+            }
+            return (
+                <form>
+                    <label>Your message</label>
+                    <input type="text" onChange={messagehandler} />
+                    <p>{paraText}</p>
+                </form>
+            );
+        }
+    ```
+
+    ```CSS
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 3rem;
+            background-color: #2d2c2c;
+            color: #959090;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        input {
+            font: inherit;
+            padding: 0.5rem;
+            background-color: #474545;
+            border: none;
+            border-radius: 4px;
+            color: white;
+        }
+    ```
+
+- Similarly, let's have a look at example of a counter where we use the concept of Updating State based on Older State.
+
+    ```Javascript
+        import React from 'react';
+        
+        import './styles.css';
+        
+        // don't change the Component name "App"
+        export default function App() {
+            const [counter, setCounter] = React.useState(0);
+            
+            function incrementCounterHandler() {
+                setCounter(prevCounter => prevCounter + 1);
+            }
+            
+            return (
+            <div>
+                <p id="counter">{counter}</p>
+                <button onClick={incrementCounterHandler}>Increment</button>
+            </div>
+            );
+        }
+    ```
+
+    ```CSS
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 3rem;
+            background-color: #2d2c2c;
+            color: #959090;
+            text-align: center;
+        }
+
+        #counter {
+            color: #d7adff;
+            font-size: 3rem;
+        }
+    ```
 
 </strong>
 </p>

@@ -32,10 +32,14 @@ const AddExpesneItem = ({handleAddExpense}) => {
     e.preventDefault();
     handleAddExpense({
       title:enteredTitle,
-      id:"u2",  // TODO pass the last id to set this id
+      id: Math.random()*100,
       amount:enteredAmt,
       date: new Date(enteredDate)
     })
+
+    setEnteredTitle('');
+    setEnteredAmt(0);
+    setEnteredDate(new Date());
   }
   return (
     <Card>
