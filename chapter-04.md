@@ -42,5 +42,12 @@ flowchart TB
 
 - We are not keeping in the `<AddExpenseItem/>` component, rather we are lifting it up to the `<Profile/>` component. So, in there we can use it like `handleExpense()`.
 
+
+## Controlled, Uncontrolled, Stateless and Stateful Components
+
+- Controlled Component: It means that a value which is used in the component like the value selected in the dropdown is passed on to a parent component through variables/props and is received from the parent component. Both the currently set value as well as the function in the end that handles the selected value is not the part of Profile.
+
+- In all the React Apps which we are building we will have a couple of components that manage some state like this `<AddExpenseItem/>` component which manages the state of the inputs. And then you will have other components which don't manage any state, like `<App/>` in our project here. And hence it's a stateless component also called presentational or dumb component because it doesn't have any internal state, it's just there to output some data. And in most React Applications you will have mostly presentational and dumb components than smart or stateful components 
+
 </strong>
 </p>
