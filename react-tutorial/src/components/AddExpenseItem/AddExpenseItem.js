@@ -32,7 +32,7 @@ const AddExpesneItem = ({handleAddExpense}) => {
     e.preventDefault();
     handleAddExpense({
       title:enteredTitle,
-      id: Math.random()*100,
+      id: (Math.random()*10000).toString(),
       amount:enteredAmt,
       date: new Date(enteredDate)
     })

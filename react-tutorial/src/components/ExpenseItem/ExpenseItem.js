@@ -32,7 +32,7 @@ function ExpenseItem({title, amount, date,id,SetExpense}){
 
             <div className='expense-item__description'>
                 <h2 className="expensetitle">{title}</h2>
-                <Button className="expense-item__price" variant="danger">$ {amount} </Button>
+                <Button className="expense-item__price" variant={amount < 0 ? 'danger' : 'success'}> {amount} &#8377;</Button>
             </div>
                 
             <div>
