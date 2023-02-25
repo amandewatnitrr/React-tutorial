@@ -75,10 +75,10 @@ const AddExpesneItem = ({handleAddExpense}) => {
                         className="rounded me-2"
                         alt=""
                       />
-                      <strong className="me-auto">History Updated</strong>
+                      <strong className="me-auto">New expense Added</strong>
                       <small>Just Now</small>
                     </Toast.Header>
-                    <Toast.Body>Record Updated: {enteredTitle} = {enteredAmt}</Toast.Body>
+                    <Toast.Body>Record Added: {enteredTitle} = {enteredAmt} &#8377;</Toast.Body>
                   </Toast>
         </ToastContainer>
             
