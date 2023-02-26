@@ -19,7 +19,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import PasswordStrengthBar from 'react-password-strength-bar';
 import SignIn from './SignIn.js';
-import SignOut from  './SignOut.js';
+import SignUp from  './SignUp.js';
 import './css/signin.css';
 
 function Signin() {
@@ -90,7 +90,7 @@ function Signin() {
         </Tab>
 
         <Tab eventKey="signup" title="Sign Up">
-        <SignOut/>
+        <SignUp/>
         </Tab>
       </Tabs>
 
