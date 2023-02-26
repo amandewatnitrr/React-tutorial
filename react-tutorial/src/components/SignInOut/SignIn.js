@@ -16,6 +16,8 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import ProgressBar from 'react-bootstrap/ProgressBar';
+import PasswordStrengthBar from 'react-password-strength-bar';
 import './css/signin.css';
 
 function Signin() {
@@ -28,7 +30,7 @@ function Signin() {
   const [showPassword, setShowPassword] = useState(false);
   const [contact, setContact] = useState("");
   const [username, setUsername]= useState("");
-  
+
   const handleName = (e) => {
     setName(e.target.value);
     console.log(e.target.value);
@@ -71,16 +73,7 @@ function Signin() {
 
   return (
     <>
-      <Navbar/>
-      <div id="home" style={{"min-height":"50vh"}}>
-        
-      <Card id="signinform">
-      <Tabs
-      defaultActiveKey="signin"
-      id="uncontrolled-tab-example"
-      className="mb-2"
-      >
-        <Tab eventKey="signin" title="Sign In">
+
             
         <Form id="formsign" noValidate validated={validated} onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -112,65 +105,7 @@ function Signin() {
             </Form.Text>
 
         </Form>
-
-        </Tab>
-        <Tab eventKey="signup" title="Sign Up">
-        <Form id="formsign" noValidate validated={validated} onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicName">
-                <Form.Label>Name</Form.Label>
-                <Form.Control required type="name" placeholder="Enter email" onChange={handleName} value={name}/>
-                <Form.Control.Feedback type="invalid">
-                    Please Enter your Name
-                </Form.Control.Feedback>
-                <Form.Control.Feedback>Looks Good!</Form.Control.Feedback>
-            </Form.Group>
-            
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control required type="email" placeholder="Enter email" onChange={handleEmail} value={email}/>
-                <Form.Control.Feedback type="invalid">
-                    Please Enter the Email Address
-                </Form.Control.Feedback>
-                <Form.Control.Feedback>Looks Good!</Form.Control.Feedback>
-                <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-                </Form.Text>
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicContact">
-                <Form.Label>Contact</Form.Label>
-                <Form.Control required type="password" placeholder="Enter Contact No." onChange={handleContact} value={contact}/>
-                <Form.Control.Feedback type="invalid">
-                    Please Enter your Contact Number
-                </Form.Control.Feedback>
-                <Form.Control.Feedback>Looks Good!</Form.Control.Feedback>
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control required type="password" placeholder="Enter Password" onChange={handlePassword} value={password}/>
-                <Form.Control.Feedback type="invalid">
-                    Please Enter the password
-                </Form.Control.Feedback>
-                <Form.Control.Feedback>Looks Good!</Form.Control.Feedback>
-            </Form.Group>
         
-            <Button variant="primary" type="submit">
-                Submit
-            </Button>
-
-            <br/><br/>
-
-        </Form>
-        </Tab>
-      </Tabs>
-
-      </Card>
-
-      </div>
-      <br/>
-      <Footer/>
-      <BgAnimation/>
     </>
   );
 }
