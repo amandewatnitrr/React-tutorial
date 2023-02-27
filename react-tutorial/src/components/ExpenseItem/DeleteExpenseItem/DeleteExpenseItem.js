@@ -10,6 +10,7 @@ function DeleteButton({ title, date, amount, id, SetExpense }) {
 
   const deleteExpense = (event) =>{
         console.log(id + " " + title + " " + amount + " " + date);
+        SetExpense(expenses=>expenses.filter((exp,idx) => idx !==id))
   }
 
   return (

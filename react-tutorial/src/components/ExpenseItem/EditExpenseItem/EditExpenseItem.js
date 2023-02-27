@@ -27,18 +27,15 @@ function EditButton({ title, date, amount, SetExpense, id }) {
   const Submit = (event) => {
 
     setShow(false);
-    SetExpense(expenses => {
-      const filtered = expenses.filter((expenseItem) => {
-        if (expenseItem.id === id) {
+    SetExpense((expenses) =>expenses.filter((expenseItem,idx) => {
+        if (id === idx) {
           expenseItem.title = enteredTitle;
           expenseItem.amount = enteredAmt;
           expenseItem.date = new Date(enteredDate);
           return expenseItem;
         }
         return expenseItem;
-      })
-      return filtered
-    })
+      }))
     // title = enteredTitle;
     // date = enteredDate;
     // amount = enteredAmt;
