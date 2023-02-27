@@ -6,15 +6,22 @@ import Card from 'react-bootstrap/Card';
 import ExpenseItem from '../../ExpenseItem/ExpenseItem';
 import './css/Profile.css';
 import AddExpesneItem from '../../AddExpenseItem/AddExpenseItem';
+import ExpenseFilter from '../../ExpenseItem/ExpensesFilter/Expensesfilter';
 
 function Profile() {
 
   var expensesData = [];
 
+  const [filteredYear, setFilteredYear] = useState('2020');
+
+  const filterChangeHandler = (selectedYear) => {
+    setFilteredYear(selectedYear);
+  };
+
   //prem
   const [expenses,SetExpense] = useState(expensesData)
 
-  const handleAddExpense  = (data)=>SetExpense(d=>([...d,data]));
+  const handleAddExpense  = (data)=>SetExpense(d=>([data,...d]));
 
   var expenselist = expenses.map((expense) => <ExpenseItem title={expense.title} amount={expense.amount} id  = {expense.id} SetExpense = {SetExpense} date={expense.date}/>);
   // prem
@@ -29,6 +36,10 @@ function Profile() {
       <Card.Body>
         {/* added hadleAddExpence */}
         <AddExpesneItem handleAddExpense={handleAddExpense}/>
+        <ExpenseFilter
+          selected={filteredYear}
+          onChangeFilter={filterChangeHandler}
+        />
         {expenselist}
         <br/>
       </Card.Body>
