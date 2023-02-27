@@ -23,7 +23,7 @@ function Profile() {
 
   const handleAddExpense  = (data)=>SetExpense(d=>([data,...d]));
 
-  var expenselist = expenses.map((expense) => <ExpenseItem title={expense.title} amount={expense.amount} id  = {expense.id} SetExpense = {SetExpense} date={expense.date}/>);
+  var expenselist = expenses.map((expense,idx) => <ExpenseItem key={idx} title={expense.title} amount={expense.amount} id  = {idx} SetExpense = {SetExpense} date={expense.date}/>);
   // prem
   return (
     <>
