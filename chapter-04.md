@@ -131,5 +131,18 @@ flowchart TB
         
     ```
 
+- React has a special concept when it comes to rendering lists of data. A concept which exsists to ensure that React is able ton update and render such lists efficiently without perfomance losses or bugs which may occur and we wanna discuss about some problems that you may face when implementing this.
+
+- Whenevr, when you might add data to the list, you might see the new `<ExpenseItem/>` component flashing out and if you look closely, the other tags might have actually flashed as well. 
+
+- So, when we add a new item, what happens is that React renders this new item as the first orn th last item in the list of div's and updates all items and replace their content, sch that it again matches the order of the items in the array. And this is not great. This is happening because to React all these items look similar and it only sees my array changed that it's now longer than before.
+
+- And hence it simply renders an additional div and it adds that to the top. And then it simply walks through all the items and updates the content inside every item to match the array content again. The final output hence is correct here but from a performance perspective it is not great because all items are visited and updated and it can even lead to bugs.
+
+- If for example, our first item if it has a certain state, if we add a new item, the old first item will be overwritten with the new first item, hence any state changes we might've  had in there would be lost. So besides potential performance issues we can also run itno bugs.
+
+- So, the question might be why Reat behaves like this?? It's because it has no other way. It currently simply checks the length of the array and then has a look at the number of items that were aoready rendered. The Individual items all look similar to React though so it can't know where a new item should be added or anything like that.
+
+
 </strong>
 </p>
