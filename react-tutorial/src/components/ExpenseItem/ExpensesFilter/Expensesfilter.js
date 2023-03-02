@@ -14,9 +14,9 @@ function ExpensesFilter (year){
     <Card variant="Secondary" bg="dark">
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
-        <label><h6>Filter by year</h6></label>
+        <label><h6>Filter by </h6></label>
         <select value={year.selected} onChange={dropdownChangeHandler}>
-          <option value='All'>All</option>
+          <option value='Year'>Year</option>
           <option value='2023'>2023</option>
           <option value='2022'>2022</option>
           <option value='2021'>2021</option>

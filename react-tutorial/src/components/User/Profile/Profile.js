@@ -11,11 +11,37 @@ import ExpenseFilter from '../../ExpenseItem/ExpensesFilter/Expensesfilter';
 function Profile() {
 
   var expensesData = [];
-
-  //prem
   const [expenses,SetExpense] = useState(expensesData)
+  const [filteredYear, setFilteredYear] = useState('Year');
 
   const handleAddExpense  = (data)=>SetExpense(d=>([...d,data]));
+
+  const filterChangeHandler = (selectedYear) => {
+    setFilteredYear(selectedYear);
+  };
+
+  {
+    /*
+      This Function filters the list/array expenses and makes another list filteredExpenseList that is to be rendered.
+      var filteredExpenseList = expenses.items.filter((expense) => {
+        return expense.date.getFullYear().toString() === filteredYear;
+      });
+      var expenselist = <p>No Expenses Found for given Year..</p>;
+      if(filteredExpenseList.length > 0)
+      {
+          expenselist = filteredExpenseList.map((expense,idx) => <ExpenseItem 
+            key={idx} 
+            title={expense.title} 
+            amount={expense.amount} 
+            id={idx} 
+            SetExpense={SetExpense} 
+            date={expense.date}
+            />
+        );
+      }
+      
+    */
+  }
 
   var expenselist = expenses.map((expense,idx) => <ExpenseItem key={idx} title={expense.title} amount={expense.amount} id  = {idx} SetExpense = {SetExpense} date={expense.date}/>);
   // prem
