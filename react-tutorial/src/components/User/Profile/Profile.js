@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 import React, { useState } from 'react';
 import Footer from '../../footer/footer';
 import Navabar from '../../Navbar/User/navbar';
@@ -11,19 +12,54 @@ import ExpenseFilter from '../../ExpenseItem/ExpensesFilter/Expensesfilter';
 function Profile() {
 
   var expensesData = [];
-
-  const [filteredYear, setFilteredYear] = useState('2020');
+  const [filteredYear, setFilteredYear] = useState('2023');
+  const [expenses,SetExpense] = useState(expensesData)
+  const handleAddExpense  = (data)=>SetExpense(d=>([data,...d]));
 
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
   };
 
-  //prem
-  const [expenses,SetExpense] = useState(expensesData)
+  {
+    /*
 
-  const handleAddExpense  = (data)=>SetExpense(d=>([data,...d]));
+      This Function filters the list/array expenses and makes another list filteredExpenseList that is to be rendered.
 
-  var expenselist = expenses.map((expense,idx) => <ExpenseItem key={idx} title={expense.title} amount={expense.amount} id  = {idx} SetExpense = {SetExpense} date={expense.date}/>);
+      var filteredExpenseList = expenses.items.filter((expense) => {
+        return expense.date.getFullYear().toString() === filteredYear;
+      });
+
+      var expenselist = <p>No Expenses Found for given Year..</p>;
+
+      if(filteredExpenseList.length > 0)
+      {
+          expenselist = filteredExpenseList.map((expense,idx) => <ExpenseItem 
+            key={idx} 
+            title={expense.title} 
+            amount={expense.amount} 
+            id={idx} 
+            SetExpense={SetExpense} 
+            date={expense.date}
+            />
+        );
+
+      }
+
+      
+
+    */
+  }
+
+  var expenselist = expenses.map((expense,idx) => <ExpenseItem 
+    key={idx} 
+    title={expense.title} 
+    amount={expense.amount} 
+    id={idx} 
+    SetExpense={SetExpense} 
+    date={expense.date}
+    />
+  );
+
   // prem
   return (
     <>
