@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 import ExpenseItem from '../../ExpenseItem/ExpenseItem';
 import './css/Profile.css';
 import AddExpesneItem from '../../AddExpenseItem/AddExpenseItem';
+import ExpenseFilter from '../../ExpenseItem/ExpensesFilter/Expensesfilter';
 
 function Profile() {
 
@@ -29,6 +30,7 @@ function Profile() {
       <Card.Body>
         {/* added hadleAddExpence */}
         <AddExpesneItem handleAddExpense={handleAddExpense}/>
+        <ExpenseFilter/>
         {expenselist}
         <br/>
       </Card.Body>
