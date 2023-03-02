@@ -20,10 +20,6 @@ function Profile() {
     setFilteredYear(selectedYear);
   };
 
-  {
-    /*
-
-      This Function filters the list/array expenses and makes another list filteredExpenseList that is to be rendered.
 
       var filteredExpenseList = expenses.items.filter((expense) => {
         return expense.date.getFullYear().toString() === filteredYear;
@@ -45,12 +41,9 @@ function Profile() {
 
       }
 
-      
 
-    */
-  }
 
-  var expenselist = expenses.map((expense,idx) => <ExpenseItem 
+  /*var expenselist = expenses.map((expense,idx) => <ExpenseItem 
     key={idx} 
     title={expense.title} 
     amount={expense.amount} 
@@ -58,7 +51,7 @@ function Profile() {
     SetExpense={SetExpense} 
     date={expense.date}
     />
-  );
+  );*/
 
   // prem
   return (
