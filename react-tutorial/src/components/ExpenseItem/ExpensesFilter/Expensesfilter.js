@@ -3,9 +3,9 @@ import Card from 'react-bootstrap/Card';
 
 import './css/ExpensesFilter.css';
 
-function ExpensesFilter (props){
+function ExpensesFilter (year){
   const dropdownChangeHandler = (event) => {
-    props.onChangeFilter(event.target.value);
+    year.onChangeFilter(event.target.value);
   };
 
   return (
@@ -15,7 +15,7 @@ function ExpensesFilter (props){
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
         <label><h6>Filter by year</h6></label>
-        <select value={props.selected} onChange={dropdownChangeHandler}>
+        <select value={year.selected} onChange={dropdownChangeHandler}>
           <option value='All'>All</option>
           <option value='2023'>2023</option>
           <option value='2022'>2022</option>
