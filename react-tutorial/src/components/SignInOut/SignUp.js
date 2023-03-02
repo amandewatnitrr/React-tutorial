@@ -50,12 +50,8 @@ function SignOut() {
     };
   
     const handlePassword = (e) => {
-      var passLength;
-      passLength=0;
       setPassword(e.target.value);
-      passLength = password.length + 1;
-      console.log(e.target.value + " " + passLength);
-      
+      console.log(e.target.value);
     };
   
     const handleSubmit = (event) => {
