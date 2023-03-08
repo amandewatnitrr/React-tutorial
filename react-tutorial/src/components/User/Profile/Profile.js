@@ -12,12 +12,17 @@ function Profile() {
 
   var expensesData = [];
   const [expenses,SetExpense] = useState(expensesData)
+  const [filteredExpenseList,setFilteredExpenseList] = useState([])
   const [filteredYear, setFilteredYear] = useState('Year');
 
   const handleAddExpense  = (data)=>SetExpense(d=>([...d,data]));
 
   const filterChangeHandler = (selectedYear) => {
+    const filteredExpenseList = expenses.filter((expense) => {
+      return expense.date.getFullYear().toString() === selectedYear;
+    });
     setFilteredYear(selectedYear);
+    setFilteredExpenseList(filteredExpenseList)
   };
 
   {
@@ -42,8 +47,17 @@ function Profile() {
       
     */
   }
-
-  var expenselist = expenses.map((expense,idx) => <ExpenseItem key={idx} title={expense.title} amount={expense.amount} id  = {idx} SetExpense = {SetExpense} date={expense.date}/>);
+  const expenseComponents = ()=>{
+    if(filteredYear==='Year'){
+      return expenses.map((expense,idx) => <ExpenseItem key={idx} title={expense.title} amount={expense.amount} id  = {idx} SetExpense = {SetExpense} date={expense.date}/>);
+    }
+    if(filteredExpenseList.length>0){
+      return filteredExpenseList.map((expense,idx) => <ExpenseItem key={idx} title={expense.title} amount={expense.amount} id  = {idx} SetExpense = {SetExpense} date={expense.date}/>);
+    }
+    if(filteredExpenseList.length==0){
+      return <p>No Expenses Found for given Year..</p>
+    }
+  }
   // prem
   return (
     <>
@@ -56,8 +70,9 @@ function Profile() {
       <Card.Body>
         {/* added hadleAddExpence */}
         <AddExpesneItem handleAddExpense={handleAddExpense}/>
-        <ExpenseFilter/>
-        {expenselist}
+        <ExpenseFilter filterChangeHandler={filterChangeHandler} year={filteredYear}/>
+        {expenseComponents()}
+        
         <br/>
       </Card.Body>
     </Card>
