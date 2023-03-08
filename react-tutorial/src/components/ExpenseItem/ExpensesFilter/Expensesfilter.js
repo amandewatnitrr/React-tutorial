@@ -3,9 +3,10 @@ import Card from 'react-bootstrap/Card';
 
 import './css/ExpensesFilter.css';
 
-function ExpensesFilter (year){
+function ExpensesFilter ({filterChangeHandler,year}){
   const dropdownChangeHandler = (event) => {
-    year.onChangeFilter(event.target.value);
+    // year.onChangeFilter(event.target.value);
+    filterChangeHandler(event.target.value);
   };
 
   return (
