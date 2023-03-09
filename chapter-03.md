@@ -110,7 +110,7 @@
     }
     ```
 
-    you should call it and pass in a function to that function. So, you call the setUserInput function and you pass a function to it, And this function which you oass to setUserInput here will automatically be executed by ReactJs. And it will recieve the previous state snapshot for that state for which you're calling the updating function.
+    you should call it and pass in a function to that function. So, you call the setUserInput function and you pass a function to it, And this function which you use to setUserInput here will automatically be executed by ReactJs. And it will receive the previous state snapshot for that state for which you're calling the updating function.
 
     ```javascript
     const titleChangeHandler = (event) => {
@@ -120,13 +120,13 @@
     }
     ```
 
-    So, in this case for the object state here above we will get the previous state snapshot and now here, we should return the new state snapshot. So, instead of function we passed  to the state updating function, we return the new State now.
+    So, in this case for the object state here above we will get the previous state snapshot and now here, we should return the new state snapshot. So, instead of the function we passed to the state updating function, we return the new State now.
 
-    And that now in our case should be our object, where I copy the key value pairs from the previous state with the spread operator but we then also override in this case here, enteredTitle with `event.target.value`.
+    And that now in our case should be our object, where I copy the key-value pairs from the previous state with the spread operator but we then also override in this case here, enteredTitle with `event.target.value`.
 
-- But why do this with the arrow function way. In many cases both will work fine but keep in mind that react schedules state updates, it doesn't perform them instantly. And therefore, theoretically if you schedule a lot of state updates at the same time, and we could be depending on a outdated or incorrect state snapshot if we use the topmost approach.
+- But why do this with the arrow function way? In many cases both will work fine but keep in mind that react schedules state updates, it doesn't perform them instantly. And therefore, theoretically, if you schedule a lot of state updates at the same time, we could be depending on an outdated or incorrect state snapshot if we use the topmost approach.
 
-- If we use the last approach here React will guarantee that the state snapshot that it gives us here in this inner function will always be the latest state snapshot, keeping all scheduled states update in mind. So, this is a safer way to always operate on the latest state snapshot. So, we should use this function syntax here whenever your state update depends on the previous state.
+- If we use the last approach here React will guarantee that the state snapshot that it gives us here in this inner function will always be the latest state snapshot, keeping all scheduled states updated in mind. So, this is a safer way to always operate on the latest state snapshot. So, we should use this function syntax here whenever your state update depends on the previous state.
 
 - Below is a simple example of we use state form with Inputs, when the length of input equals and exceeds 3, it shows the message "Valid Message" else "Invalid Message". You can copy and paste the code and test it out.
 
