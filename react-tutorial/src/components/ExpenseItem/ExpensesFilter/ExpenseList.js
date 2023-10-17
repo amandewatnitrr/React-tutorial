@@ -1,7 +1,7 @@
 import React from "react";
 import ExpenseItem from "../ExpenseItem";
 
-function ExpenseFilterView({filteredExpenseList,SetExpense,filteredYear,expenses}) {
+function ExpenseList({filteredExpenseList,SetExpense,filteredYear,expenses}) {
 
     if(filteredYear==='Year'){
         return expenses.map((expense,idx) => <ExpenseItem key={idx} title={expense.title} amount={expense.amount} id  = {idx} SetExpense = {SetExpense} date={expense.date}/>);
@@ -18,4 +18,4 @@ function ExpenseFilterView({filteredExpenseList,SetExpense,filteredYear,expenses
       }
 }
 
-export default ExpenseFilterView;
+export default ExpenseList;

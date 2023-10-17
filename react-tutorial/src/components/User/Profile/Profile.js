@@ -3,11 +3,11 @@ import Footer from '../../footer/footer';
 import Navabar from '../../Navbar/User/navbar';
 import BgAnimation from '../../Background/BgAnimation';
 import Card from 'react-bootstrap/Card';
-import ExpenseItem from '../../ExpenseItem/ExpenseItem';
 import './css/Profile.css';
 import AddExpesneItem from '../../AddExpenseItem/AddExpenseItem';
 import ExpenseFilter from '../../ExpenseItem/ExpensesFilter/Expensesfilter';
-import ExpenseFilterView from '../../ExpenseItem/ExpensesFilter/ExpenseFilterView';
+import ExpenseList from '../../ExpenseItem/ExpensesFilter/ExpenseList';
+import ExpenseChart from '../../Chart/ExpenseChart';
 
 function Profile() {
 
@@ -49,7 +49,13 @@ function Profile() {
     */
   }
   const expenseComponents = ()=>{
-    return <ExpenseFilterView filteredExpenseList={filteredExpenseList} SetExpense={SetExpense} filteredYear={filteredYear} expenses={expenses}/>
+    return <ExpenseList filteredExpenseList={filteredExpenseList} SetExpense={SetExpense} filteredYear={filteredYear} expenses={expenses}/>
+  }
+
+  const expenseChart = ()=>{
+
+      return <ExpenseChart expenses={filteredExpenseList}/>;
+    
   }
   // prem
   return (
@@ -63,6 +69,8 @@ function Profile() {
       <Card.Body>
         {/* added hadleAddExpence */}
         <AddExpesneItem handleAddExpense={handleAddExpense}/>
+        <br/>
+        {expenseChart()}
         <ExpenseFilter filterChangeHandler={filterChangeHandler} year={filteredYear}/>
         {expenseComponents()}
         

@@ -1,0 +1,10 @@
+.chart {
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: rgb(33, 37, 41);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    height: 10rem;
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color)
+  }
