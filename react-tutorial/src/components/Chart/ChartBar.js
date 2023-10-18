@@ -3,7 +3,6 @@ import "./css/ChartBar.css";
 
 function Chartbar(props){
 
-    console.log(props);
     let barFillHeight = 0;
     if(props.maxValue > 0)
         {

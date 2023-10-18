@@ -20,8 +20,11 @@ function ExpenseChart({expenses}){
     ];
     for (const expense of expenses){
         const expenseMonth = expense.date.getMonth();
-        chartDataPoints[expenseMonth].value += -1*expense.amount;
+        if(expense.amount<0){
+        chartDataPoints[expenseMonth].value += -1*parseInt(expense.amount);
+        }
     }
+    console.log(chartDataPoints)
     return <Chart dataPoints={chartDataPoints}/>;
 }
 
