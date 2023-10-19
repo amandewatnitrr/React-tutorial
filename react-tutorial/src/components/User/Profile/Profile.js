@@ -8,7 +8,7 @@ import AddExpesneItem from '../../AddExpenseItem/AddExpenseItem';
 import ExpenseFilter from '../../ExpenseItem/ExpensesFilter/Expensesfilter';
 import ExpenseList from '../../ExpenseItem/ExpensesFilter/ExpenseList';
 import ExpenseChart from '../../Chart/ExpenseChart';
-import Linechart from '../../ReChart/LineCharter';
+import Rechart from '../../ReChart/ReCharter';
 
 function Profile() {
 
@@ -57,8 +57,8 @@ function Profile() {
       return <ExpenseChart expenses={filteredExpenseList}/>;
   }
 
-  const linechart = ()=>{
-      return <Linechart expenses={filteredExpenseList}/>;
+  const rechart = ()=>{
+      return <Rechart expenses={filteredExpenseList}/>;
   }
   // prem
   return (
@@ -75,7 +75,7 @@ function Profile() {
         <br/>
         {expenseChart()}
         <br/>
-        {linechart()}
+        {rechart()}
         <ExpenseFilter filterChangeHandler={filterChangeHandler} year={filteredYear}/>
         {expenseComponents()}
         

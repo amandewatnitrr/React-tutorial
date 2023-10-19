@@ -3,10 +3,8 @@ import {
   MDBFooter,
   MDBContainer,
   MDBIcon,
-  MDBInput,
   MDBCol,
-  MDBRow,
-  MDBBtn
+  MDBRow
 } from 'mdb-react-ui-kit';
 import './css/footer.css';
 import {

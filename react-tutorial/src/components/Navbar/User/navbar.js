@@ -1,18 +1,9 @@
 import React from 'react';
-import ReactDOM from'react-dom';
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-  } from "react-router-dom";
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import './css/navbar.css'
 import Button from 'react-bootstrap/Button';
 import {FaHome, FaSignInAlt, FaDoorOpen,FaJenkins} from 'react-icons/fa';
-import {GiTakeMyMoney} from 'react-icons/gi';
 
 
 function ExpenseItem(){
