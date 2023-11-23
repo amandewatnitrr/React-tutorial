@@ -1,5 +1,6 @@
 import styled from "styled-components";
-
+import React from "react";
+import styles from './Button.module.css'
 /* 
  * Using styled-components library to replace styling.
  * Use -> import styled from "styled-components"
@@ -18,7 +19,7 @@ import styled from "styled-components";
    to affect any other component in the app.
 */
 
-const Button = styled.button.attrs({className: "add-goal"})`
+/*const Button = styled.button.attrs({className: "add-goal"})`
     font: inherit;
     padding: 0.5rem 1.5rem;
     border: 1px solid #8b005d;
@@ -41,13 +42,36 @@ const Button = styled.button.attrs({className: "add-goal"})`
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
   }
 `;
+*/
 
-// const Button = props => {
-//   return (
-//     <button type={props.type} className="button" onClick={props.onClick}>
-//       {props.children}
-//     </button>
-//   );
-// };
+const Button = props => {
+
+  // In this method below we use the css modules to implement styles to various components on our webpage.
+  // But, now when we would inspect this element on the the browser, just like in case of styled components
+  // It will assign a strange classname to the component that we never assigned.
+
+  /**
+   * So what's happening here right under the hood is it takes those css classes in the css files, 
+   * and basically changes those class names to be unique, that's the core thing it does. For, every component
+   * it changes the classname of the classes we are importing.
+   */
+
+  return (
+    <button type={props.type} className={styles.button} onClick={props.onClick}>
+      {props.children}
+    </button>
+  );
+
+  /*
+
+  The normal way of creating a component where we actually just import the css file.
+
+  return (
+    <button type={props.type} className="button" onClick={props.onClick}>
+      {props.children}
+    </button>
+  );
+  */
+};
 
 export default Button;
