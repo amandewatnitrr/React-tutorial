@@ -1,0 +1,92 @@
+{
+    "plugins": [
+        {
+            "type": "add",
+            "pluginName": "fleet.docker"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.git.frontend"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.language.cpp"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.xml"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.intellij"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.json"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.javascript"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.java"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.maven"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.log"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.python"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.wsl"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.shell"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.tailwindcss"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.keymaps.VSCode"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.vue"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.yaml"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.spring.boot"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.kotlin"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.gradle"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.groovy"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.css"
+        }
+    ]
+}

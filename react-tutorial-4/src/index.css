@@ -6,7 +6,8 @@
 
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Hack Nerd Font Mono','Quicksand', sans-serif;
+  font-weight: 1000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: radial-gradient(#186a5e, #053339);
@@ -72,8 +73,8 @@ header p {
 
 #player button {
   cursor: pointer;
-  background-color: #54a399;
-  border: 1px solid #54a399;
+  background-color: #2cffc7;
+  border: 1px solid #2cffc7;
   padding: 0.4rem 1rem;
   color: #061e1a;
   border-radius: 4px;
