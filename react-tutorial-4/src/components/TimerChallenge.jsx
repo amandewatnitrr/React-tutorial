@@ -14,10 +14,14 @@ function TimerGame({ title, targetTime }) {
             setTimerExpired(true);
             setTimerIsActive(false); // Add this line to reset timerIsActive
             clearInterval(timer.current);
-            setTimeRemaining(targetTime * 1000);
+
             dialog.current.open();
         }
     }, [timeRemaining, targetTime]);
+
+    function handleReset() {
+        setTimeRemaining(targetTime * 1000);
+    }
 
     function handleStart() {
         setTimerIsActive(true);
@@ -45,7 +49,7 @@ function TimerGame({ title, targetTime }) {
 
     return (
         <>
-            <ResultModal ref={dialog} result="Lost" targetTime={targetTime} onClose={handleDialogClose} />
+            <ResultModal ref={dialog} remainingTime={timeRemaining} targetTime={targetTime} onReset={handleReset} onClose={handleDialogClose} />
             <section className="challenge">
                 <h2>{title}</h2>
                 <p className="challenge-time">
