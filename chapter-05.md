@@ -383,7 +383,6 @@
   - Container components are concerned with how things work.
   - They are concerned with passing data down to the Presentational components.
   - May contain both presentational and container components inside it, but they donot have a DOM or markup of their own.
-  - 
 
 
 </p>
