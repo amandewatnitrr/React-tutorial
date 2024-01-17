@@ -310,19 +310,19 @@
     ```
     
 - Props
- - Props are used to pass data from one component to another component.
- - Props are used to handle complex data and are passed down from parent component to child component.
- - Example:
-   ```Javascript
-   import React from 'react';
+  - Props are used to pass data from one component to another component.
+  - Props are used to handle complex data and are passed down from parent component to child component.
+  - Example:
+    ```Javascript
+    import React from 'react';
 
-   const Component = ({ message }) => {
-     return <div>{message}</div>;
-   };
+    const Component = ({ message }) => {
+      return <div>{message}</div>;
+    };
 
-   export default Component;
-   ```
-   
+    export default Component;
+    ```
+
 
 
 </p>
