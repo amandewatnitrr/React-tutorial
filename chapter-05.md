@@ -216,7 +216,7 @@
         {items.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
-
+  )
   export default List;
   
   ```
@@ -323,6 +323,67 @@
     export default Component;
     ```
 
+## React Lifecycle of Components
+
+- Every React component has 4 stages of its lifecycle:
+  - Initialization
+  - Mounting
+  - Updating
+  - Unmounting
+
+![](./imgs/gfg.png)
+
+- Initialization
+  - Initialization is the process of defining the props and state of a component.
+  - This is generally done by the constructor method.
+  - It is called only once during the component's lifecycle.
+
+- Mounting
+  - Mounting is the process of creating a React component and inserting it into the DOM.
+  - Once the initialization is done, the component is mounted on the DOM, and render method is called.
+  - The functions that are called during the mounting phase are:
+    - `constructor()`
+    - `static getDerivedStateFromProps()`
+    - `render()`
+    - `componentDidMount()`: This method is called after the component is mounted on the DOM, i.e. after execution of `render()`.
+
+- Updation
+  - Updation is the process of updating the state or props of a component.
+  - The functions that are called during the updation phase are:
+  
+    - `static getDerivedStateFromProps()`: This method is called before every render method in both mounting and updating phase.It takes updated props and current state as an argument.
+    
+    - `setState()`: This is not a lifecycle method, and can be invoked explicitly at any instant. This function is used to update the state of the component.
+    
+    - `shouldComponentUpdate()`: let's react know whether the component's output is affected by the current change in state or props.
+      - Basically it decides whether to re-render the component or not.
+      - If this function returns false the subsequent steps of rendering will not be carried out.
+      - The function can't be used in case of `forceUpdate()`.
+      
+    - `getSnapshotBeforeUpdate()`: stores the previous state of the DOM before the update.
+      - It is called right before the changes from the virtual DOM are to be reflected in the DOM.
+      
+    - `componentDidUpdate()`: the function is invoked after the component is re-rendered.
+    
+- Unmounting
+  - Unmounting is the process of removing a React component from the DOM.
+  - The function that is called during the unmounting phase is:
+    - `componentWillUnmount()`: This method is called before the component is removed from the DOM.
+      - It denotes the end of Lifecycle for a component.
+
+## What is the difference between Presentational and Container Components?
+
+- Presentational Components
+  - Presentational components are concerned with how things look.
+  - They are concerned with the UI.
+  - Have no major dependencies on the rest of the app.
+  - May contain other Presentational and Container components inside it.
+
+- Container Components
+  - Container components are concerned with how things work.
+  - They are concerned with passing data down to the Presentational components.
+  - May contain both presentational and container components inside it, but they donot have a DOM or markup of their own.
+  - 
 
 
 </p>
