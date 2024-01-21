@@ -325,6 +325,8 @@
 
 ## React Lifecycle of Components
 
+![](./imgs/different_phases_of_the_component_lifecycle.png)
+
 - Every React component has 4 stages of its lifecycle:
   - Initialization
   - Mounting
@@ -384,5 +386,143 @@
   - They are concerned with passing data down to the Presentational components.
   - May contain both presentational and container components inside it, but they donot have a DOM or markup of their own.
 
+
+## Data Flow in React
+
+- Unidirectional data flow is a technique that is mainly found in functional reactive programming.
+- It is known as 1-way data flow, which means data has only 1 way to be transferred to other parts of the application.
+- React does not support 2-way data binding or bidirectional data binding.
+- In react, a state is always owned by a specific component. Changing state of that specific component will not affect the state of other components(parent/sibling), only the child components will be affected.
+- This is the main reason that state is often moved up in the component tree, so that it can be shared b/w components that need to access it.
+
+## What are error boundaries in React?
+
+- Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
+
+- A class component becomes an error boundary if it defines either (or both) of the lifecycle methods `static getDerivedStateFromError()` or `componentDidCatch()`.
+
+- In what places can an error boundary detect an error?
+  - Render phase
+  - Inside a lifecycle method
+  - Inside the constructor
+
+## What are Higher-Order Components (HOCs)?
+
+- A higher-order component is a function that takes a component and returns a new component.
+- It is a pattern that is derived from React's compositional nature.
+- It is used to share common functionality between components without repeating code.
+
+## Explain React Hooks
+
+- React hooks are built-in functions that allows developers for using the state and lifecycle methods within React components.
+- React Hooks are functions that allow us to implemet react state and lifecycle features from within functional components.
+- They cannot be used in Class Components.
+- But there are 2 rules, that must be followed, while using them:
+  - Hooks must be used at the top level of the component.
+  - Hooks must be used only in functional components.
+
+## `useEffect` React Hooks
+
+- `useEffect` is a React Hook that allows us to perform side effects in functional components.
+- With the help of `useEffect`,  we wil be able to inform React that component needs to do something after render or after there's a change in the state.
+- The function we have passed will be remembered by React and called later after performing the DOM updates.
+- `useEffect` hook will run by default after the first render, and also after each update of the component.
+
+## What are Custom Hooks?
+
+- Custom Hooks are JavaScript functions whose names are prefixed with the word `use`, and call other hooks.
+- Custom Hooks are considered sufficient for replacing render props and HOCs, and reducing amount of nesting required.
+
+## Explain Strict Mode in React
+
+- StrictMode is  a tool for highlighting potential problems in an application.
+- It helps identifying components with unsafe lifecycle methods.
+  - Certain lifecycle methods are unsafe to use in asynchronous react application.
+  - provides a warning if any of the class componets use unsafe lifecycle method.
+- It gives warnings about usage of legacy string API.
+
+## Methods to optimize React App Performance
+
+- Optimizing React App Performance involves employing various techniques to enhance the rendering speed, and overall user experience.
+
+- Using `useMemo()`:
+  - It is a react hook that used for caching CPU-Expensive Functions.
+  - Sometimes in a React App, a CPU Expensive function is called repeatedly due to re-rendering of a component, which can lead to slow rendering.
+  - This hook can be used to cace such functions. CPU Expensive functions are called only when they are needed.
+  
+- using `React.PureComponent`
+  - It is a base component  class that checks  thae states and props associated with the component, to know whether the component should be updated.
+  - Instead of using `React.Component`, we can use `React.PureComponent` to avoid unnecessary re-rendering of the component.
+  
+- Maintaining State Colocation:
+  - This is a process of moving the state close to where you need it as possible.
+  - Sometimes, in React app, we have a lot of unessecary states inside the parent component which makes the code less readable and harder to maintain.
+  - Not to forget, having many states inside a single component leads to unnecessary re-rendering of the component.
+    - It is better to shift states which are less valuable to the parent component, to a separate component.
+    
+- Lazy loading:
+  - It is a technique used to reduce the load time of React App.Lazy Loading helps reduce the task of web app performances to a minimum.
+
+
+## Explain about types of Hooks in React
+
+- Built-in Hooks:
+  - Basic Hooks:
+    - `useState()`: used to set and Retrieve the state.
+    - `useEffect()`: used to perform side effects in functional components.
+    - `useContext()`: used for creating common data that is to be accessed by many components hierarchy without passing props down manually at every level.
+  - Additional Hooks:
+    - `useReducer()`: 
+      - used to manage complex state logic with several sub-values or when the upcoming state is dependent on the previous state.
+      - enables optimization of component performance that will trigger deper updates as it is permitted to pass dispatch down instead of callbacks.
+      - `useMemo()`: used for caching CPU-Expensive Functions. 
+        - used to memoize functions, when there is change in one of the dependencies
+        - helps in avoiding expensive calculations on each render.
+      - `useCallback()`:
+        - useful while passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders.
+      - `useImperativeHandle()`:
+        - enable modifying the instance that will be passed with the `ref` object.
+      - `useDebugValue()`:
+        - used to display a label for custom hooks in React DevTools.
+      - `useRef()`:
+        - permits creating a reference to DOM element directly within the functional component.
+      - `useLayoutEffect()`:
+        - used for reading layout from the DOM and synchronously re-rendering.
+- Custom Hooks:
+  - Custom Hooks are JavaScript functions whose names are prefixed with the word `use`, and call other hooks.
+  - Custom Hooks are considered sufficient for replacing render props and HOCs, and reducing amount of nesting required.
+
+![](./imgs/types_of_Hooks_in_React.png)
+
+
+## React Hooks vs React Classes
+
+<table>
+  <tr>
+    <th>React Hooks</th>
+    <th>React Classes</th>
+  </tr>
+    <tr>
+        <td>used in fucntional components of React.</td>
+        <td>used in class-based components of React.</td>
+    </tr>
+    <tr>
+        <td>will not require declaration of any kind of constructor</td>
+        <td>necessary to declare the constructor inside the class component</td>
+    </tr>
+    <tr>
+        <td>does not require the use of the `this` keyword in state declaration or modification</td>
+        <td>requires the use of the `this` keyword in state declaration and modification</td>
+    </tr>
+    <tr>
+        <td>easier to use because of `useState functionality`</td>
+        <td>No specific function is available for helping us to access the state and corresponding state values.</td>
+    </tr>
+    <tr>
+        <td>can be helpful in implementing Redux and context API</td>
+        <td>because of long setup of state declarations, class states are generally not preffered</td>
+    </tr>
+
+</table>
 
 </p>
