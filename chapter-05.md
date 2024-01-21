@@ -522,7 +522,20 @@
         <td>can be helpful in implementing Redux and context API</td>
         <td>because of long setup of state declarations, class states are generally not preffered</td>
     </tr>
-
 </table>
+
+## How does the performance of using Hooks will differ in comparison with the classes??
+
+- React Hooks will avoid a lot of overheads such as the instance creation, binding of events etc., that are present with classes.
+- Hooks will result in smaller component trees since they will be avoiding the nesting that exists in HOCs and will render props which result in less amount of work being done by react.
+
+## Do Hooks cover all the functionalites provided by classes?
+
+- No, Hooks do not cover all the functionalities provided by classes.
+- There are no Hook equivalents for `getSnapshotBeforeUpdate`, `getDerivedStateFromError` and `componentDidCatch` lifecycle methods.
+
+## What is React Router?
+
+- 
 
 </p>
