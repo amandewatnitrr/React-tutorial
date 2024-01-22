@@ -541,46 +541,104 @@
 - allows to change browser URL and will keep the user interface in sync with the URL.
 - makes use of component structure for calling the components
   - Major Components of React Router are:
-    - `<BrowserRouter>`: 
-- Example:
-  ```Javascript
-  import './App.css';
-  import 'bootstrap/dist/css/bootstrap.min.css';
-  import React, {Component} from 'react';
-  import ReactDOM from'react-dom';
-  import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  } from "react-router-dom";
-  import Navbar from './components/Navbar/Home/navbar';
-  import BgAnimation from './components/Background/BgAnimation';
-  import Home from './components/Home/Home';
-  import SignInUp from './components/SignInOut/SignInUp';
-  import ExpenseCalc from './components/User/ExpenseCalc/ExpenseCalc';
-  import Profile from './components/User/Profile/Profile';
-  import NotFound from './components/404/404';
+    - `<BrowserRouter>`: It is a router implementation that will make use of HTML5 history API for keeping UI in sync with the URL. It is parent component useful in storing all other components.
+    - `<Routes>`: It is a component that is be used for defining the routes.
+    - `<Route>`: It is a component that is be used for defining the matching pattern between the URL and the component that is to be rendered.
+    - `<Link>`: It is a component that is be used for creating a link to navigate between the pages.
+  - Example:
+    ```Javascript
+    import './App.css';
+    import 'bootstrap/dist/css/bootstrap.min.css';
+    import React, {Component} from 'react';
+    import ReactDOM from'react-dom';
+    import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    } from "react-router-dom";
+    import Navbar from './components/Navbar/Home/navbar';
+    import BgAnimation from './components/Background/BgAnimation';
+    import Home from './components/Home/Home';
+    import SignInUp from './components/SignInOut/SignInUp';
+    import ExpenseCalc from './components/User/ExpenseCalc/ExpenseCalc';
+    import Profile from './components/User/Profile/Profile';
+    import NotFound from './components/404/404';
       
-  function App() {
-  return (
-  <>
-  <Router>
-  <Routes>
+    function App() {
+    return (
+    <>
+    <Router>
+    <Routes>
       
-              <Route exact path='/Home' element={<Home />} />
-              <Route exact path='/SignIn' element={<SignInUp />} />
-              <Route exact path='/ExpenseCalc' element={<ExpenseCalc />} />
-              <Route exact path='/Profile' element={<Profile />} />
-              <Route path="/*" element={<NotFound />} />
+                <Route exact path='/Home' element={<Home />} />
+                <Route exact path='/SignIn' element={<SignInUp />} />
+                <Route exact path='/ExpenseCalc' element={<ExpenseCalc />} />
+                <Route exact path='/Profile' element={<Profile />} />
+                <Route path="/*" element={<NotFound />} />
       
-          </Routes>
-        </Router>
-      </>
-  );
-  }
+            </Routes>
+          </Router>
+        </>
+    );
+    }
       
-  export default App;
-  ```
+    export default App;
+    ```
+  
+## Can React Hooks replace Redux??
+
+- React Hook cannot be used to replace Redux, when it comes to managing global application state in large complex applications, even though React provide Hooks like `useReducer` that manages state transitions similar to Redux.
+- Redux is very useful at lower level of component hierarchy to handle the pieces of a state which are dependent on each other, instead of declaration of multiple `useState()` hooks.
+
+## Explain Conditional Rendering in React
+
+- Conditional rendering refers to the process of rendering different UI based on certain conditions.
+- It works in the same way as JavaScript conditions. Using conditional rendering, it is possible to toggle specific application functions, API data rendering, hide or show elements, decide permission levels, authentication handling, and so on.
+- Some of the ways to implement conditional rendering in React are:
+  - Using element variables
+    - Example:
+      ```Javascript
+      import React from 'react';
+
+      const Component = ({ message }) => {
+        if (message) {
+          return <div>{message}</div>;
+        } else {
+          return <div>No message</div>;
+        }
+      };
+
+      export default Component;
+      ```
+      
+  - Using the ternary operator
+    - Example:
+      ```Javascript
+      import React from 'react';
+
+      const Component = ({ message }) => {
+        return <div>{message ? message : 'No message'}</div>;
+      };
+
+      export default Component;
+      ```
+      
+  - Using if-else statements
+    - Example:
+      ```Javascript
+      import React from 'react';
+
+      const Component = ({ message }) => {
+        if (message) {
+          return <div>{message}</div>;
+        } else {
+          return <div>No message</div>;
+        }
+      };
+
+      export default Component;
+      ```
+
 
 
 </p>
